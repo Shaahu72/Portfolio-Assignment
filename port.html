@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahid Ali | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="intro">
+      <h1>Shahid Ali</h1>
+      <p class="title">Computer Science Graduate | Python Developer | IT Automation Enthusiast</p>
+      <p class="desc">Passionate about leveraging technology to solve complex problems and build innovative solutions.
+        With a strong foundation in Python programming and a keen interest in IT automation and web development, I am
+        eager to contribute to impactful projects.</p>
+      <div class="actions">
+        <a href="#expertise" class="btn primary">View Projects</a>
+        <a href="#" class="btn outline">Download Resume</a>
+      </div>
+    </div>
+    <div class="profile-img">
+      <img src="img/IMG_20210121_020010_Original.JPEG" alt="Profile">
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="navbar">
+    <a href="#expertise">Expertise</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Expertise Section -->
+  <section id="expertise" class="expertise">
+    <h2>My Expertise</h2>
+    <p class="subtitle">A showcase of my technical capabilities and tools I excel in.</p>
+
+    <div class="cards-container">
+      <div class="card" onclick="toggleProjects('python')">
+        <div class="icon">💻</div>
+        <h3>Python Programming</h3>
+        <p>Developing robust and scalable applications, scripts, and tools.</p>
+        <ul class="project-list" id="python">
+          <li>AI Chatbot Assistant</li>
+          <li>Data Cleaner Script</li>
+          <li>Flask REST API</li>
+        </ul>
+      </div>
+      <div class="card" onclick="toggleProjects('automation')">
+        <div class="icon">⚙️</div>
+        <h3>IT Automation</h3>
+        <p>Automating tasks and processes to improve efficiency and reliability.</p>
+        <ul class="project-list" id="automation">
+          <li>Auto Server Backup Script</li>
+          <li>CI/CD Pipeline Setup</li>
+        </ul>
+      </div>
+      <div class="card" onclick="toggleProjects('git')">
+        <div class="icon">🐱</div>
+        <h3>Git & GitHub</h3>
+        <p>Version control and collaboration on coding projects.</p>
+        <ul class="project-list" id="git">
+          <li>Open Source Contributor</li>
+          <li>Custom GitHub Actions</li>
+        </ul>
+      </div>
+      <div class="card" onclick="toggleProjects('webdev')">
+        <div class="icon">🖥️</div>
+        <h3>Web Development</h3>
+        <p>Creating responsive websites using HTML, CSS, JavaScript.</p>
+        <ul class="project-list" id="webdev">
+          <li>Portfolio Website</li>
+          <li>Responsive Landing Page</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <p class="subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+      visions.</p>
+
+    <div class="contact-box">
+      <div class="left">
+        <h3>Let’s Connect!</h3>
+        <p>Feel free to reach out via email, connect on social media, or explore my work on GitHub. I look forward to
+          hearing from you!</p>
+        <p class="email"><span>📧</span> shahidali72@yahoo.com</p>
+      </div>
+      <div class="right">
+        <a href="mailto:shahid_ali_72@yahoo.com" class="btn full purple">📨 Email Me</a>
+        <a href="https://github.com/shaahu72" target="_blank" class="btn full outline">🐱 View GitHub</a>
+        <a href="https://https://www.linkedin.com/shahid-ali-881619316/" target="_blank" class="btn full outline"> Connect on LinkedIn</a>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Shahid Ali. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleProjects(id) {
+      const allLists = document.querySelectorAll('.project-list');
+      allLists.forEach(list => {
+        if (list.id === id) {
+          list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        } else {
+          list.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
